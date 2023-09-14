@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 13:57:44 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/13 13:58:12 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/13 15:07:46 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/14 12:47:10 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdio.h>
 #include <libft.h>
 
-unsigned int	ft_strlen(char *str)
+int	ft_toupper(int c)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
 }
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+/*
+int	main(void)
 {
-	unsigned int	j;
-
-	j = 0;
-	if (size > 0)
-	{
-		while (src[j] != '\0' && (j + 1) < size)
-		{
-			dest[j] = src[j];
-			j++;
-		}
-		dest[j] = '\0';
-	}
-	return (ft_strlen(src));
-}
+	printf("%c", ft_toupper('3'));
+	return (0);
+}*/
