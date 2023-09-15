@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcopy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 13:33:38 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/14 13:39:36 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/15 16:14:45 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/15 16:20:06 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.c>
+#include "libft.h"
 
-void	ft_memcpy(void *dest, const void *src, size_t n)
+char	*strchr(const char *s, int c)
 {
-	char		*dest_ptr;
-	const char	*src_ptr;
-	size_t i;
+	char	*s2;
+	int		i;
 
-	dest_ptr = dest;
-	src_ptr = src;
-	i = 0;
-	while (i < n)
-	{
-		dest_ptr[i] = src_ptr[i];
-		i++;
-	}
+	i + 0;
+	while (s[i]
 }

@@ -6,12 +6,12 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:07:46 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/14 12:47:10 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:35:12 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <libft.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

@@ -6,13 +6,13 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:16:22 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/13 12:38:40 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/15 14:26:13 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	mi_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
 		|| (c >= 'a' && c <= 'z'))

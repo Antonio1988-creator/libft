@@ -6,11 +6,11 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:51:39 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/14 12:59:06 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:05:38 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

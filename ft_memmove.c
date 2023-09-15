@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 13:51:42 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 14:12:19 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/14 17:44:58 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/15 13:42:41 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned int	j;
+	char		*dest_ptr;
+	const char	*src_ptr;
 
-	j = 0;
-	if (size > 0)
+	dest_ptr = dst;
+	src_ptr = src;
+	if (dest_ptr < src_ptr)
 	{
-		while (src[j] != '\0' && (j + 1) < size)
-		{
-			dst[j] = src[j];
-			j++;
-		}
-		dst[j] = '\0';
+		while (len--)
+			*dest_ptr++ = *src_ptr++;
 	}
-	return (ft_strlen(src));
+	else
+	{
+		dest_ptr += len;
+		src_ptr += len;
+		while (len--)
+			*(--dest_ptr) = *(--src_ptr);
+	}
+	return (dst);
 }

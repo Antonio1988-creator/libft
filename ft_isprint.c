@@ -6,16 +6,16 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:02:04 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/13 13:26:06 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/15 14:33:29 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	ft_isprint(int charact)
+int	ft_isprint(int c)
 {
-	if (!(charact >= 32 && charact <= 126))
-		return (1);
-	else
+	if (!(c >= 32 && c <= 126))
 		return (0);
+	else
+		return (1);
 }

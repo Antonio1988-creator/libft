@@ -6,14 +6,14 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:12:03 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/14 12:21:23 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/15 12:59:00 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <libft.h>
+#include "libft.h"
 
-void	ft_memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*ptr;
@@ -25,6 +25,7 @@ void	ft_memset(void *str, int c, size_t n)
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
+	return (str);
 }
 /*
 int	main(void)

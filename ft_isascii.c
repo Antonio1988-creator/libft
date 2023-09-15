@@ -6,15 +6,15 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:49:25 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/13 12:50:34 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/15 14:41:02 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	is_ascii(int charact)
+int	ft_isascii(int c)
 {
-	if (charact >= 0 && charact <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
