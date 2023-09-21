@@ -6,11 +6,12 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:49:25 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 14:41:02 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/20 10:10:57 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 int	ft_isascii(int c)
 {
@@ -19,3 +20,17 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
+/*
+int	main(void)
+{
+	int	input;
+	int	result;
+
+	input = 127;
+	result = ft_isascii(input);
+	if (result)
+		printf("%d es un valor ASCII.\n", input);
+	else
+		printf("%d no es un valor ASCII.\n", input);
+	return (0);
+}*/

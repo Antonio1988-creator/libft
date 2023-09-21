@@ -6,11 +6,12 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:02:04 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 14:33:29 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/20 10:29:54 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <unistd.h>
 
 int	ft_isprint(int c)
 {
@@ -19,3 +20,25 @@ int	ft_isprint(int c)
 	else
 		return (1);
 }
+/*
+int	main(void)
+{
+	int		input;
+	int		result;
+	char	print_char;
+
+	input = 0;
+	result = ft_isprint(input);
+	if (result)
+	{
+		print_char = '1';
+		write(1, &print_char, 1);
+	}
+	else
+	{
+		print_char = '0';
+		write(1, &print_char, 1);
+	}
+	write(1, "\n", 1);
+	return (0);
+}*/

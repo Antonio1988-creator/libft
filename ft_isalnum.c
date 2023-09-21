@@ -6,11 +6,12 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:16:22 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 14:26:13 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/20 09:40:31 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 int	ft_isalnum(int c)
 {
@@ -20,3 +21,23 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+/*
+int	main(void)
+{
+	char	c;
+
+	c = '0';
+	while (c <= 'z')
+	{
+		if (ft_isalnum(c))
+		{
+			printf("%c es un dígito o una letra alfabética.\n", c);
+		}
+		else
+		{
+			printf("%c no es un dígito ni una letra alfabética.\n", c);
+		}
+		c++;
+	}
+	return (0);
+}*/

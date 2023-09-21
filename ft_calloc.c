@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:31:49 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/20 08:19:14 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/18 10:38:28 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/18 11:01:03 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_isalpha(int c)
+void	*ft_calloc(size_t num_elements, size_t element_size)
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
+	void	*arr;
+
+	arr = malloc(num_elements * element_size);
+	if (!arr)
+		return (NULL);
+	ft_bzero(arr, num_elements * element_size);
+	return (arr);
 }
-/*
-int	main(void)
-{
-	char	c;
-
-	c = 'A';
-	while (c <= 'z')
-	{
-		if (ft_isalpha(c))
-		{
-			printf("%c es una letra alfabética.\n", c);
-		}
-		else
-		{
-			printf("%c no es una letra alfabética.\n", c);
-		}
-		c++;
-	}
-	return (0);
-}*/

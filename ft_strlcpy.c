@@ -6,11 +6,12 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:51:42 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 14:12:19 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:20:38 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -28,3 +29,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
+/*int main(void)
+{
+    char source[] = "Hello, World!";
+    char destination[15];
+    size_t size = sizeof(destination);
+
+    printf("Valor ft_strlen: %zu\n", ft_strlcpy(destination, source, size));
+	printf("%s\n", source);
+	printf("%s\n", destination); 
+    return 0;
+}*/

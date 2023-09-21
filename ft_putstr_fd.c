@@ -1,43 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_pustr_fd.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:31:49 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/20 08:19:14 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/19 16:54:29 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/19 16:55:45 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-//#include <stdio.h>
+#include <unistd.h>
 
-int	ft_isalpha(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
-/*
-int	main(void)
-{
-	char	c;
-
-	c = 'A';
-	while (c <= 'z')
+	if (!s)
+		return ;
+	while (*s)
 	{
-		if (ft_isalpha(c))
-		{
-			printf("%c es una letra alfabética.\n", c);
-		}
-		else
-		{
-			printf("%c no es una letra alfabética.\n", c);
-		}
-		c++;
+		write(fd, s, 1);
+		s++;
 	}
-	return (0);
-}*/
+}

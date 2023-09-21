@@ -6,11 +6,12 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:55:09 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 13:34:43 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:33:35 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -34,3 +35,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dest_len = size;
 	return (dest_len + src_len);
 }
+/*
+int main(void)
+{
+    char dest[20] = "Hello, ";
+    const char *src = "world!";
+    size_t size = 20;
+
+    size_t result = ft_strlcat(dest, src, size);
+
+    printf("Concatenated string: %s\n", dest);
+    printf("Result of ft_strlcat: %zu\n", result);
+
+    return (0);
+}*/

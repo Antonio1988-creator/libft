@@ -5,30 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 17:04:22 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 14:17:33 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/15 19:03:37 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/20 14:56:15 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	char	*s;
-	char	*h;
+#include "libft.h"
 
-	if (*to_find == '\0' && *str == '\0')
-		return (str);
-	while (*str != '\0')
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	size_t	needle_len;
+
+	needle_len = ft_strlen(needle);
+	if (needle_len == 0)
+		return ((char *)haystack);
+	while (*haystack && len >= needle_len)
 	{
-		s = str;
-		h = to_find;
-		while (*h != '\0' && *h != '\0' && *h == *s)
-		{
-			h++;
-			s++;
-		}
-		if (*h == '\0')
-			return (str);
-		str++;
+		if (*haystack == *needle && ft_strncmp(haystack,
+				needle, needle_len) == 0)
+			return ((char *)haystack);
+		haystack++;
+		len--;
 	}
-	return ("");
+	return (NULL);
 }

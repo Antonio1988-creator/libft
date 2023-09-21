@@ -1,43 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:31:49 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/20 08:19:14 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/13 17:04:22 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/15 18:58:54 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-//#include <stdio.h>
-
-int	ft_isalpha(int c)
+char	*ft_strstr(char *str, char *to_find)
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
-/*
-int	main(void)
-{
-	char	c;
+	char	*s;
+	char	*h;
 
-	c = 'A';
-	while (c <= 'z')
+	if (*to_find == '\0' && *str == '\0')
+		return (str);
+	while (*str != '\0')
 	{
-		if (ft_isalpha(c))
+		s = str;
+		h = to_find;
+		while (*h != '\0' && *h != '\0' && *h == *s)
 		{
-			printf("%c es una letra alfabética.\n", c);
+			h++;
+			s++;
 		}
-		else
-		{
-			printf("%c no es una letra alfabética.\n", c);
-		}
-		c++;
+		if (*h == '\0')
+			return (str);
+		str++;
 	}
-	return (0);
-}*/
+	return ("");
+}

@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:07:46 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 13:35:12 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:36:18 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	ft_toupper(int c)
 /*
 int	main(void)
 {
-	printf("%c", ft_toupper('3'));
+	printf("%c", ft_toupper('v'));
 	return (0);
 }*/

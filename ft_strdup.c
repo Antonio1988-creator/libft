@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:31:49 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/20 08:19:14 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/18 11:17:55 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/18 11:51:07 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
-//#include <stdio.h>
 
-int	ft_isalpha(int c)
+char	*ft_strdup(const char *str)
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
+	char	*str2;
+
+	str2 = (char *)malloc((ft_strlen(str) + 1) * sizeof(char));
+	if (!str2)
+		return (NULL);
+	ft_strlcpy(str2, str, ft_strlen(str) + 1);
+	return (str2);
 }
-/*
-int	main(void)
-{
-	char	c;
-
-	c = 'A';
-	while (c <= 'z')
-	{
-		if (ft_isalpha(c))
-		{
-			printf("%c es una letra alfabética.\n", c);
-		}
-		else
-		{
-			printf("%c no es una letra alfabética.\n", c);
-		}
-		c++;
-	}
-	return (0);
-}*/

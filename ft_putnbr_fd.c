@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:31:49 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/20 08:19:14 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/19 17:27:57 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/19 17:28:33 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
-//#include <stdio.h>
 
-int	ft_isalpha(int c)
+static void	ft_recursive_putnbr_fd(int n, int fd)
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
-/*
-int	main(void)
-{
-	char	c;
-
-	c = 'A';
-	while (c <= 'z')
+	if (n == 0)
 	{
-		if (ft_isalpha(c))
-		{
-			printf("%c es una letra alfabética.\n", c);
-		}
-		else
-		{
-			printf("%c no es una letra alfabética.\n", c);
-		}
-		c++;
+		ft_putchar_fd('0', fd);
+		return ;
 	}
-	return (0);
-}*/
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	if (n / 10)
+	{
+		ft_recursive_putnbr_fd(n / 10, fd);
+	}
+	ft_putchar_fd((n % 10) + '0', fd);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
+	ft_recursive_putnbr_fd(n, fd);
+}

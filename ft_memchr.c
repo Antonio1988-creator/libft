@@ -1,43 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:31:49 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/20 08:19:14 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/15 18:28:41 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/15 18:31:34 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-//#include <stdio.h>
+#include <stddef.h>
 
-int	ft_isalpha(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
-/*
-int	main(void)
-{
-	char	c;
+	const unsigned char	*ptr;
+	size_t				i;
 
-	c = 'A';
-	while (c <= 'z')
+	i = 0;
+	ptr = s;
+	while (i < n)
 	{
-		if (ft_isalpha(c))
+		if (ptr[i] == (unsigned char)c)
 		{
-			printf("%c es una letra alfabética.\n", c);
+			return ((void *)(ptr + i));
 		}
-		else
-		{
-			printf("%c no es una letra alfabética.\n", c);
-		}
-		c++;
+		i++;
 	}
-	return (0);
-}*/
+	return (NULL);
+}

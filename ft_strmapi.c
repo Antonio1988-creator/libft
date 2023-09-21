@@ -1,43 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:31:49 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/20 08:19:14 by anguil-l         ###   ########.fr       */
+/*   Created: 2023/09/19 16:15:20 by anguil-l          #+#    #+#             */
+/*   Updated: 2023/09/19 16:15:52 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_isalpha(int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
-/*
-int	main(void)
-{
-	char	c;
+	char	*result;
+	size_t	len;
+	int		i;
 
-	c = 'A';
-	while (c <= 'z')
+	if (!s || !f)
+		return (NULL);
+	len = 0;
+	while (s[len])
+		len++;
+	result = (char *)malloc((len + 1) * sizeof(char));
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		if (ft_isalpha(c))
-		{
-			printf("%c es una letra alfabética.\n", c);
-		}
-		else
-		{
-			printf("%c no es una letra alfabética.\n", c);
-		}
-		c++;
+		result[i] = f(i, s[i]);
+		i++;
 	}
-	return (0);
-}*/
+	result[i] = '\0';
+	return (result);
+}
