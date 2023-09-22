@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 11:17:55 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/18 11:51:07 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/22 12:21:21 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,20 @@ char	*ft_strdup(const char *str)
 	ft_strlcpy(str2, str, ft_strlen(str) + 1);
 	return (str2);
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    const char *original = "Hola, mundo!";
+    char *duplicada;
+    duplicada = ft_strdup(original);
+    if (!duplicada)
+    {
+        printf("Error: No se pudo duplicar la cadena.\n");
+        return (1);
+    }
+    printf("Cadena duplicada: %s\n", duplicada);
+    free(duplicada);
+    return (0);
+}*/

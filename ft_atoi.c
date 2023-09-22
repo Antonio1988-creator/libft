@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 12:36:28 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 12:37:38 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/22 12:22:59 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,18 @@ int	ft_atoi(const char *str)
 	}
 	return (number * sign);
 }
+/*
+#include <stdio.h>
+
+int	ft_atoi(const char *str);
+
+int main(void)
+{
+    const char *str = "   -12345";
+
+    int result = ft_atoi(str);
+
+    printf("Resultado de ft_atoi: %d\n", result);
+
+    return (0);
+}*/

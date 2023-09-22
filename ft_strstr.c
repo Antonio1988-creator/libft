@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:04:22 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/15 18:58:54 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/22 13:50:17 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,18 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return ("");
 }
+/*
+#include "libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char str[] = "Este es un ejemplo de cadena";
+	char to_find[] = "ejemplo";
+	char *result = ft_strstr(str, to_find);
+	if (result != NULL)
+		printf("Subcadena encontrada en la posición: %ld\n", result - str);
+	else
+		printf("Subcadena no encontrada.\n");
+	return (0);
+}*/

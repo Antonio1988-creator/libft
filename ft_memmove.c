@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:44:58 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/20 14:24:23 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/22 12:48:14 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,22 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char		*dest_ptr;
-	const char	*src_ptr;
+	unsigned char		*dst_ptr;
+	const unsigned char	*src_ptr;
 
-	dest_ptr = dst;
-	src_ptr = src;
-	if (dst == NULL && src == NULL & len > 0)
-		return (NULL);
-	if (dest_ptr < src_ptr)
+	dst_ptr = (unsigned char *)dst;
+	src_ptr = (const unsigned char *)src;
+	if (dst_ptr < src_ptr)
 	{
 		while (len--)
-			*dest_ptr++ = *src_ptr++;
+			*dst_ptr++ = *src_ptr++;
 	}
-	else
+	else if (dst_ptr > src_ptr)
 	{
-		dest_ptr += len;
+		dst_ptr += len;
 		src_ptr += len;
 		while (len--)
-			*(--dest_ptr) = *(--src_ptr);
+			*(--dst_ptr) = *(--src_ptr);
 	}
 	return (dst);
 }
@@ -64,5 +62,5 @@ int main(void)
         write(1, "El movimiento de memoria se realizó correctamente.\n", 51);
     }
 
-    return 0;
+    return (0);
 }*/

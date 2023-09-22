@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 12:16:56 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/18 15:26:00 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/22 14:02:55 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    const char *cadenaOriginal = "Esta es una cadena de ejemplo";
+    char *subcadena;
+    size_t inicio = 5;
+    size_t longitud = 10;
+    subcadena = ft_substr(cadenaOriginal, inicio, longitud);
+    if (subcadena != NULL)
+    {
+        printf("Subcadena extraída: %s\n", subcadena);
+        free(subcadena);
+    }
+    else
+        printf("Error: No se pudo extraer la subcadena.\n");
+    return (0);
+}*/
