@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:49:06 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/22 12:24:55 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/26 09:02:04 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,3 +80,21 @@ char	*ft_itoa(int n)
 	}
 	return (pt_itoa);
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int n = -12345;
+
+    char *result = ft_itoa(n);
+
+    if (result)
+    {
+        printf("Resultado: %s\n", result);
+        free(result);
+	}
+    else
+        printf("Error en la función ft_itoa\n");
+    return 0;
+}*/

@@ -6,12 +6,13 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:20:04 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/18 18:47:14 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:52:39 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+//#include <stdio.h>
 
 static int	is_in_set(char c, const char *set)
 {
@@ -48,3 +49,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
+/*
+int main(void)
+{
+    const char *cadenaOriginal = " 1  Hola, Mundo! 1  ";
+    const char *conjuntoSet = "1  ";
+    char *cadenaRecortada;
+
+    cadenaRecortada = ft_strtrim(cadenaOriginal, conjuntoSet);
+
+    if (cadenaRecortada != NULL)
+    {
+        printf("Cadena original: '%s'\n", cadenaOriginal);
+        printf("Cadena recortada: '%s'\n", cadenaRecortada);
+        free(cadenaRecortada);
+    }
+    else
+    {
+        printf("Error: No se pudo recortar la cadena.\n");
+    }
+
+    return (0);
+}*/

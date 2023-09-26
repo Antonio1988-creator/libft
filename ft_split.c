@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:37:44 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/19 11:38:52 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/22 19:18:52 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	numwords(char const *s, char c)
 	word_num = 0;
 	while (s[cur] != 0)
 	{
-		if (s[cur] != c && (s[cur + 1] == c || s[cur + 1] == 0))
+		if (s[cur] != c && (s[cur + 1] == c || s[cur + 1] == '\0'))
 			word_num++;
 		cur++;
 	}
@@ -76,3 +76,31 @@ char	**ft_split(char const *s, char c)
 	}
 	return (result);
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    char const *input_string = "Esta es una cadena de ejemplo para dividir";
+    char c = ' '; // Carácter delimitador
+
+    char **result = ft_split(input_string, c);
+
+    if (result)
+    {
+        int i = 0;
+        while (result[i])
+        {
+            printf("%s\n", result[i]);
+            free(result[i]);
+            i++;
+        }
+        free(result);
+    }
+    else
+    {
+        printf("Error en la función ft_split\n");
+    }
+
+    return 0;
+}*/
