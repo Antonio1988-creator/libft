@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 16:54:29 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/19 16:55:45 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/26 10:29:29 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,10 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
+/*
+int	main(void)
+{
+	char	*str = "Hola, corrector";
+	ft_putstr_fd(str, 1);
+	return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:26:21 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/22 14:14:01 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:33:26 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	main(void)
 {
 	char	*str_one = "Hola, ";
 	char	*str_two = "don Pepito";
+
 	printf("%s", ft_strjoin(str_one, str_two));
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:37:44 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/22 19:18:52 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/26 15:32:27 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	numwords(char const *s, char c)
 
 	cur = 0;
 	word_num = 0;
-	while (s[cur] != 0)
+	while (s[cur] != '\0')
 	{
 		if (s[cur] != c && (s[cur + 1] == c || s[cur + 1] == '\0'))
 			word_num++;
@@ -40,9 +40,9 @@ static int	allocate_words(char **result, char const *s, char c)
 	word = 0;
 	while (s[end_cur])
 	{
-		if (s[end_cur] == c || s[end_cur] == 0)
+		if (s[end_cur] == c || s[end_cur] == '\0')
 			start_cur = end_cur + 1;
-		if (s[end_cur] != c && (s[end_cur + 1] == c || s[end_cur + 1] == 0))
+		if (s[end_cur] != c && (s[end_cur + 1] == c || s[end_cur + 1] == '\0'))
 		{
 			result[word] = malloc(sizeof(char) * (end_cur - start_cur + 2));
 			if (!result[word])
@@ -79,28 +79,26 @@ char	**ft_split(char const *s, char c)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    char const *input_string = "Esta es una cadena de ejemplo para dividir";
-    char c = ' '; // Carácter delimitador
+	char const *input_string = "Esta es una cadena de ejemplo para dividir";
+	char c = ' ';
+	char **result = ft_split(input_string, c);
 
-    char **result = ft_split(input_string, c);
-
-    if (result)
-    {
-        int i = 0;
-        while (result[i])
-        {
-            printf("%s\n", result[i]);
-            free(result[i]);
-            i++;
-        }
-        free(result);
-    }
-    else
-    {
-        printf("Error en la función ft_split\n");
-    }
-
-    return 0;
+	if (result)
+	{
+		int i = 0;
+		while (result[i])
+		{
+			printf("%s\n", result[i]);
+			free(result[i]);
+			i++;
+		}
+		free(result);
+	}
+	else
+	{
+		printf("Error en la función ft_split\n");
+	}
+	return (0);
 }*/

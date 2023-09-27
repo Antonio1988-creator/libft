@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 17:27:57 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/19 17:28:33 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/26 11:00:14 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,9 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_recursive_putnbr_fd(n, fd);
 }
+/*
+int	main(void)
+{
+	ft_putnbr_fd(24234, 1);
+	return (0);
+}*/
