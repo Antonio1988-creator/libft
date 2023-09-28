@@ -6,7 +6,7 @@
 #    By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 16:29:25 by anguil-l          #+#    #+#              #
-#    Updated: 2023/09/27 16:07:18 by anguil-l         ###   ########.fr        #
+#    Updated: 2023/09/28 19:53:15 by anguil-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,9 @@ SRC_DIR = srcs
 OBJ_DIR = obj
 INC_DIR = includes
 HEADER = libft.h
-SRC_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ${SRC_FILES}
+SRC_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c ft_lstmap_bonus.c ${SRC_FILES}
 OBJ_BONUS = ${SRC_BONUS:.c=.o}
 
 # Lista de archivos fuente
