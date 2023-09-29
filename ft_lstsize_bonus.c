@@ -6,7 +6,7 @@
 /*   By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 12:25:35 by anguil-l          #+#    #+#             */
-/*   Updated: 2023/09/28 15:50:59 by anguil-l         ###   ########.fr       */
+/*   Updated: 2023/09/29 13:33:01 by anguil-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	int		i;
+	t_list	*current;
 
 	i = 0;
-	while (lst)
+	current = lst;
+	while (current)
 	{
 		i++;
-		lst = lst->next;
+		current = current->next;
 	}
 	return (i);
 }
