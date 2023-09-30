@@ -6,7 +6,7 @@
 #    By: anguil-l <anguil-l@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 16:29:25 by anguil-l          #+#    #+#              #
-#    Updated: 2023/09/29 10:40:07 by anguil-l         ###   ########.fr        #
+#    Updated: 2023/09/30 10:29:48 by anguil-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,10 +55,13 @@ $(NAME): $(OBJ_FILES)
 	@echo "(•̀ᴗ•́)و $(NAME) generado!"
 
 # Regla para compilar la biblioteca con funciones bonus
-bonus: $(OBJ_BONUS)
+bonus: .bonus
+
+.bonus: $(OBJ_BONUS)
 	ar rc $(NAME) $(OBJ_BONUS)
 	ranlib $(NAME)
 	@echo "(•̀ᴗ•́)و $(NAME) con bonus generado!"
+	touch .bonus
 
 # Remueve todos los archivos objetos y la biblioteca estática
 clean:
